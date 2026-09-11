@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+     <script src="https://cdn.tailwindcss.com"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     
+    
+</head>
+<body class="bg-neutral-900">
+    <div draggable="" 
+        id="wrapper"
+        class=" flex flex-col absolute rounded-lg shadow-md w-[800px] left-0 right-0 top-0 bottom-0 m-auto h-[calc(100%-88px)] overflow-hidden bg-neutral-700 ">
+        
+    
+                <div id="header" class="max-[600px]:absolute max-[600px]:top-0  flex justify-between cursor-move text-black p-8 bg-white border-2 rounded-t-2xl w-full m-0">
+                
+                
+                    <div id="actions" class="float-right absolute right-[30px] flex gap-3 cursor-pointer"
+                        onmousedown="event.stopPropagation(); event.stopImmediatePropagation();  event.preventDefault();">
+
+                            
+                            <i class="fa fa-window-minimize" onclick="toggleMinimize()" ></i>
+                            <i class="fa fa-window-maximize" onclick="toggleMaximize()"></i>
+                            <i class="fa fa-window-close" onclick="closeWindow()"> </i>
+                    </div>
+                </div>
+
+                <div class=" visible max-[600px]:invisible   flex flex-wrap gap-2 justify-left margin-auto sticky top-0 z-[20] w-full bg-neutral-900 invert py-4 px-4 shrink-0">
+     
+                        <div class="w-[25px] h-[25px] bg-neutral-300 pl-1 hover:bg-neutral-600 hover:text-black-700 transition-colors "><i class="fa fa-undo" aria-hidden="true"></i></div>
+                        <div class="w-[25px] h-[25px] bg-neutral-300 pl-1 hover:bg-neutral-600 hover:text-black-700 transition-colors"><i class="fa fa-repeat" aria-hidden="true"></i></div>
+                        <div class="w-[130px] h-[25px] bg-neutral-300 pl-5 hover:bg-neutral-600 hover:text-black-700 transition-colors">Insert picture</div>
+                        <div class="w-[60px] h-[25px] pl-1 bg-neutral-300 flex flex-wrap margin-auto pt-1 hover:bg-neutral-600 hover:text-black-700 transition-colors"><i class="fa fa-table" aria-hidden="true" > Table</p></i></div>
+                        <div class="w-[85px] h-[25px] pl-1 bg-neutral-300 flex flex-wrap margin-auto hover:bg-neutral-600 hover:text-black-700 transition-colors"><img class="w-[20px]"src="icons/noun-shapes-4866445.png"> Shapes</div>
+                        <div class="w-[80px] h-[25px] pl-1 bg-neutral-300 flex flex-wrap margin-auto pt-1 hover:bg-neutral-600 hover:text-black-700 transition-colors"><i class="fa fa-header" aria-hidden="true"> Header</i></div>
+                        <div class="w-[85px] h-[25px] pl-1 bg-neutral-300 flex flex-wrap margin-auto hover:bg-neutral-600 hover:text-black-700 transition-colors "><img class="w-[20px]" src="icons/document-footer.png"> Footer</div>
+                        <div class="w-[120px] h-[25px] pl-1 bg-neutral-300 flex flex-wrap margin-auto hover:bg-neutral-600 hover:text-black-700 transition-colors"><img class="w-[20px]" src="icons/noun-page-number-1617205.png" title="page number by Mariyani from the Noun Project (CC BY 3.0)"> <p class="text-sm pl-1">Page Number</p></img></div>
+                        <div class="w-[25px] h-[25px] bg-neutral-300 pl-1.5 hover:bg-neutral-600 hover:text-black-700 transition-colors"><i class="fa fa-file-text" aria-hidden="true"></i></div>
+                        <div class="w-[25px] h-[25px] bg-neutral-300 pl-0.5 hover:bg-neutral-600 hover:text-black-700 transition-colors"><img src="icons/svg_379084.svg"></div>     
+                        <div class="w-[25px] h-[25px] bg-neutral-300 pl-1 hover:bg-neutral-600 hover:text-black-700 transition-colors"><i class="fa fa-bold" aria-hidden="true"></i></div>
+                        <div class="w-[25px] h-[25px] bg-neutral-300 pl-2 hover:bg-neutral-600 hover:text-black-700 transition-colors"><i class="fa fa-italic" aria-hidden="true"></i></div>
+                        <div class="w-[25px] h-[25px] bg-neutral-300 pl-1.5 hover:bg-neutral-600 hover:text-black-700 transition-colors"><i class="fa fa-underline" aria-hidden="true"></i></div>
+                        <div class="relative arial  w-[100px] mr-[7px] hover:bg-neutral-600 hover:text-black-700 transition-colors"><select class="display: none bg-neutral-300 hover:bg-neutral-600 hover:text-black-700 transition-colors">
+                            <option>Times New Roman</option>
+                            <option>Arial</option>
+                            <option>Calibri</option>
+                            </select>
+                        </div>
+                        <div class="relative arial h-[25px] bg-neutral-300 mx-12 hover:bg-neutral-600 hover:text-black-700 transition-colors ">
+                            <select class="display: none bg-neutral-300 hover:bg-neutral-600 hover:text-black-700 transition-colors">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                            <option>12</option>
+                            <option>13</option>
+                            <option>14</option>
+                            <option>15</option>
+                            <option>16</option>
+                            <option>17</option>
+                            <option>18</option>
+                            <option>19</option>
+                            <option>20</option>
+                            </select>
+                        </div>
+                        <div class="relative arial w-[25px] h-[25px] bg-neutral-300 ml-[-55px] hover:bg-neutral-600 hover:text-black-700 transition-colors"><img src="icons/Font increase.svg"></div>
+                        <div class="relative arial w-[25px] h-[25px] bg-neutral-300 hover:bg-neutral-600 hover:text-black-700 transition-colors"><img src="icons/Font decrease.svg"></div>
+                        <div class="relative arial w-[25px] h-[25px] bg-neutral-300 hover:bg-neutral-600 hover:text-black-700 transition-colors"><img src="icons/Font size.svg"></div>
+                        <div class="relative arial w-[25px] h-[25px] bg-neutral-300 hover:bg-neutral-600 hover:text-black-700 transition-colors"><img src="icons/Font colors.svg"></div>
+                        <div class="relative arial w-[25px] h-[25px] bg-neutral-300 hover:bg-neutral-600 hover:text-black-700 transition-colors"><img src="icons/Highlight filled.svg"></div>
+                        <div class="relative arial w-[25px] h-[25px] bg-neutral-300 pl-1 hover:bg-neutral-600 hover:text-black-700 transition-colors"><i class="fa fa-align-left" aria-hidden="true"></i></div>
+                        <div class="relative arial w-[25px] h-[25px] bg-neutral-300 pl-1 hover:bg-neutral-600 hover:text-black-700 transition-colors"><i class="fa fa-align-center" aria-hidden="true"></i></div>
+                        <div class="relative arial w-[25px] h-[25px] bg-neutral-300 pl-1 hover:bg-neutral-600 hover:text-black-700 transition-colors"><i class="fa fa-align-right" aria-hidden="true"></i></div>
+                        <div class="relative arial w-[25px] h-[25px] bg-neutral-300 pl-1 hover:bg-neutral-600 hover:text-black-700 transition-colors"><i class="fa fa-align-justify" aria-hidden="true"></i></div>
+                        <div class="relative arial w-[25px] h-[25px] bg-neutral-300 pl-1 hover:bg-neutral-600 hover:text-black-700 transition-colors" ><img src="icons/Line spacing.svg"></div>
+                        <div class="relative arial w-[25px] h-[25px] bg-neutral-300 pl-1 hover:bg-neutral-600 hover:text-black-700 transition-colors"><i class="fa fa-list" aria-hidden="true"></i></div>
+                        <div class="relative arial w-[25px] h-[25px] bg-neutral-300 pl-1 hover:bg-neutral-600 hover:text-black-700 transition-colors"><i class="fa fa-list-ol" aria-hidden="true"></i></div>
+                        <div class="relative arial w-[25px] h-[25px] bg-neutral-300 pl-1 hover:bg-neutral-600 hover:text-black-700 transition-colors"><img src="icons/Text bullet list tree.svg"></div>
+                        <div class="relative arial w-[50px] h-[25px] bg-neutral-300 pl-1 hover:bg-neutral-600 hover:text-black-700 transition-colors"><a href="../Navigation page/index.html">Home</a></div>
+                        </div>
+
+                        <div class="container">
+                        <div class="min-[300px]:hidden max-[600px]:overflow-auto max-[600px]:absolute">
+                            <select class="w-[100px] bg-neutral-600 absolute top-[20px] h-[100px]">
+                                <option><i class="fa fa-undo" aria-hidden="true"></i></option>
+                                <option><i class="fa fa-repeat" aria-hidden="true"></i></option>
+                                <option>Insert picture</option>
+                                <option><i class="fa fa-table" aria-hidden="true" ></i></option>
+                                </select>
+                            </div>
+                    </div>
+                    
+               
+                <div>
+                    <select class="display: none bg-neutral-300 hover:bg-neutral-600 hover:text-black-700 transition-colors">
+                    <option><i class="fa fa-undo" aria-hidden="true"></i></option>
+                    <option><i class="fa fa-repeat" aria-hidden="true"></i></option>
+                    </select>
+                </div>
+
+                <div class="flex-1 overflow-y-auto relative">
+                     <div class="absolute right-[200px] top-[100px] h-[297mm] w-[210mm] bg-white z-[10]"><textarea class="h-full w-full p-2 resize-none "></textarea></div>
+                </div>
+                
+            </body>
+        <footer class="shrink-0 flex justify-center items-center gap-4 w-full h-[30px] bg-neutral-300 z-30">
+            <p>Page 1</p>
+            <p>0 words</p>
+            <p>English (United Kingdom)</p>
+            <input type="range" min="1" max="100" value="50"></input>
+        </footer>
+    </div>
+       <script src="script.js"></script>
+    </body>
+    <p>Buttons by Phoenix Group</p>
+</html>
